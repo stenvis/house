@@ -8,7 +8,7 @@ const
    path = require('path');
 
 const 
-   CLIENT_PATH = path.join(process.cwd(), './client'),
+   CLIENT_PATH = path.join(process.cwd(), './src'),
    PORT = 3000;
 
 const MIME_TYPES = {
