@@ -9095,7 +9095,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const models = {
    'house': {
-      path: './assets/models/house.glb',
+      path: './src/assets/models/house.glb',
    },
 };
 
@@ -9111,7 +9111,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const textures = {
    uv_grid: {
-      url: './assets/textures/uv_grid.jpeg',
+      url: './src/assets/textures/uv_grid.jpeg',
    }, 
 };
 
