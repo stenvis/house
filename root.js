@@ -648,7 +648,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const 
-   DRACO_PATH = '/src/dependencies/three/draco/',
+   DRACO_PATH = 'src/dependencies/three/draco/',
    draco_loader = new _dependencies_three_loaders_DRACOLoader_js__WEBPACK_IMPORTED_MODULE_0__.DRACOLoader().setDecoderPath(DRACO_PATH);
 
 class GLTFLoader {
