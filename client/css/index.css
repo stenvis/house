@@ -1,0 +1,199 @@
+:root {
+   --active-color: #279da1; 
+
+   --bg-color-1: #278da1;
+
+   --font-color-1: #5c5c5c;
+
+   --basis-font: 'montserrat';
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	text-indent: 1.5rem;
+	text-align: justify;
+}
+
+html, body {
+  height: 100%;
+}
+
+#canvas {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+
+	display: block;
+}
+#preload-progress {
+   align-items: center;
+   background-color: var(--bg-color-1);
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   justify-content: center;
+   position: absolute;
+   transition: opacity .4s;
+   width: 100vw;
+   z-index: 10;
+   pointer-events: none;
+}
+
+#preload-progress.hidden {
+   opacity: 0;
+   pointer-events: all;
+}
+
+.loading-line-container {
+    background-color: lightgray;
+    height: 2px;
+    position: relative;
+    width: 18rem;
+}
+
+.loading-bar {
+   margin-left: .59rem;
+   margin-top: .3rem;
+}
+
+.loading-bar span {
+    color: var(--font-color-1);
+    font-family: monospace;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .2px;
+    word-spacing: 2px;
+}
+
+#preload-line {
+   background-color: darkgreen;
+   height: 2px;
+   transition: width .2s ease, background-color .8s ease;
+   width: 0;
+}
+
+#preload-name {
+   margin-right: .3rem;
+}
+.dropdown-container {
+   position: absolute;
+   left: 4rem;
+   top: 4rem;
+   width: 500px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.dropdown {
+   width: 220px;
+   z-index: 10;
+}
+
+.dd-btn {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 10px 14px;
+   border-radius: 8px;
+   border: 1px solid #d6d9e6;
+   background: #fff;
+   cursor: pointer;
+   box-shadow: 0 1px 2px rgba(12, 18, 30, 0.03);
+}
+
+.chev {
+   transition: transform .22s ease
+}
+
+.chev.open {
+   transform: rotate(180deg)
+}
+
+.menu {
+   position: relative;
+   left: 0;
+   right: 0;
+   margin-top: 8px;
+   background: #fff;
+   border-radius: 8px;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height .25s ease, box-shadow .25s ease;
+   z-index: 30;
+   box-shadow: 0 6px 18px rgba(19, 24, 40, 0.06);
+}
+
+.menu.open {
+   max-height: 280px;
+}
+
+.menu ul {
+   list-style: none;
+   margin: 0;
+   padding: 8px;
+}
+
+.menu li {
+   padding: 8px 10px;
+   border-radius: 6px;
+   cursor: pointer;
+   user-select: none;
+   margin: 4px 0;
+   font-family: sans-serif;
+   font-size: 0.84rem;
+   transition: .2s ease-in-out background;
+}
+
+.menu li:hover,
+.menu li:focus {
+   background: #f1f4ff;
+}
+
+.menu li:active {
+   transform: scale(.998);
+}
+
+.menu li.active {
+   background: rgb(230, 235, 240);
+}
+
+/* Простий контрол для демонстрації додавання елементів */
+.controls {
+   margin-top: 16px;
+   display: flex;
+   gap: 8px
+}
+
+.controls input {
+   flex: 1;
+   padding: 8px;
+   border-radius: 6px;
+   border: 1px solid #d6d9e6
+}
+
+.controls button {
+   padding: 8px 12px;
+   border-radius: 6px;
+   border: 1px solid #2b6be6;
+   background: #2b6be6;
+   color: #fff;
+   cursor: pointer
+}
+
+.selected {
+   font-weight: 600
+}
+.text {
+   font-family: monospace;
+   text-align: center;
+}
