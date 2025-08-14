@@ -7458,6 +7458,7 @@ const {
 } = _js_storage_dom_js__WEBPACK_IMPORTED_MODULE_0__["default"];
 
 function setProgressLineWidth(width) {
+   if (width > 100) width = 100;
    preload_line.style.width = width + '%';
    preload_value.textContent = width + '%';
 };
